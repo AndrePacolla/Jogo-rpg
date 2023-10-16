@@ -100,10 +100,10 @@ class Stage{
     }
 
     doAttack(attacking, attacked){
-      if(attacking.life < 0 || attacked.life < 0){
+      if(attacking.life <=0 || attacked.life <= 0){
         this.log.addMenssage('Oponente sem sinal de vida')
+        return
       }
-
        let attackFactor = (Math.random() * 2).toFixed(2);
        let defenseFactor = (Math.random() * 2).toFixed(2);
        let actualAttack = attacking.attack * attackFactor;
